@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vox — AI Voice Agent Platform</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Editorial+New:ital@0;1&family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Grain Overlay -->
+  <div class="grain"></div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="#" class="nav-logo">VOX</a>
+    <div class="nav-links">
+      <a href="#">Docs</a>
+      <a href="#">Pricing</a>
+      <a href="#">Agents</a>
+    </div>
+    <a href="#" class="nav-cta">Get Early Access →</a>
+  </nav>
+
+  <!-- Hero Section -->
+  <main class="hero">
+
+    <!-- Left column: headline -->
+    <div class="hero-text">
+      <div class="hero-tag">
+        <span class="dot"></span>
+        Inbound Voice Intelligence
+      </div>
+      <h1 class="hero-headline">
+        Build your<br />
+        <em>perfect</em><br />
+        voice agent.
+      </h1>
+      <p class="hero-sub">
+        Define who your AI is, what it does, and who it speaks for — in plain language. No code. No templates. Just intent.
+      </p>
+    </div>
+
+    <!-- Right column: input card -->
+    <div class="hero-card">
+
+      <div class="card-header">
+        <div class="card-header-left">
+          <div class="status-ring"></div>
+          <span>Agent Configuration</span>
+        </div>
+        <span class="card-step">01 / 03</span>
+      </div>
+
+      <form class="agent-form" id="agentForm">
+
+        <div class="form-field" data-index="0">
+          <label class="field-label">
+            <span class="label-num">01</span>
+            Wie heißt dein Agent und was ist seine Aufgabe?
+          </label>
+          <textarea
+            id="task"
+            name="task"
+            rows="3"
+            placeholder="z.B. „ARIA ist ein Inbound-Support-Agent, der Kundenanfragen zu Produktretouren bearbeitet und Tickets erstellt.""
+            class="field-textarea"
+          ></textarea>
+        </div>
+
+        <div class="form-field" data-index="1">
+          <label class="field-label">
+            <span class="label-num">02</span>
+            Für wen arbeitet dein Agent — welches Unternehmen oder Team?
+          </label>
+          <textarea
+            id="company"
+            name="company"
+            rows="2"
+            placeholder="z.B. „Für das Customer-Success-Team von Luminary GmbH, einem B2B-SaaS-Unternehmen in der Logistikbranche.""
+            class="field-textarea"
+          ></textarea>
+        </div>
+
+        <div class="form-field" data-index="2">
+          <label class="field-label">
+            <span class="label-num">03</span>
+            Welchen Ton und welche Persönlichkeit soll dein Agent haben?
+          </label>
+          <textarea
+            id="personality"
+            name="personality"
+            rows="2"
+            placeholder="z.B. „Professionell, empathisch und lösungsorientiert. Nie abweisend, immer klar strukturiert.""
+            class="field-textarea"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn" id="submitBtn">
+          <span class="btn-text">Agent erstellen</span>
+          <span class="btn-icon">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M3 8H13M13 8L9 4M13 8L9 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+          <div class="btn-shimmer"></div>
+        </button>
+
+      </form>
+
+      <!-- Voice waveform decoration -->
+      <div class="waveform-bar" id="waveform" aria-hidden="true">
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span><span></span>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Bottom strip -->
+  <footer class="footer">
+    <div class="footer-left">
+      <span>© 2025 Vox Labs</span>
+      <span class="footer-divider">·</span>
+      <span>Datenschutz</span>
+      <span class="footer-divider">·</span>
+      <span>AGB</span>
+    </div>
+    <div class="footer-stats">
+      <div class="stat">
+        <span class="stat-val">4.2M+</span>
+        <span class="stat-label">Calls handled</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">99.7%</span>
+        <span class="stat-label">Uptime</span>
+      </div>
+      <div class="stat">
+        <span class="stat-val">&lt;180ms</span>
+        <span class="stat-label">Latency</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
